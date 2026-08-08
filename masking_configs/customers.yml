@@ -1,0 +1,23 @@
+version: 2
+models:
+- name: customers
+  columns:
+  - name: email_address
+    meta:
+      masking_policy: mask_email
+      justification: Contains personal email addresses which are direct contact identifiers.
+  - name: full_name
+    meta:
+      masking_policy: redact
+      justification: Contains full customer names which are direct personally identifiable
+        information.
+  - name: phone_number
+    meta:
+      masking_policy: mask_phone
+      justification: Contains personal telephone numbers which are direct contact
+        identifiers.
+  - name: ssn
+    meta:
+      masking_policy: mask_ssn
+      justification: Contains Social Security Numbers which are highly sensitive government-issued
+        identifiers.
