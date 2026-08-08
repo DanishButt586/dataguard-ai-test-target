@@ -1,0 +1,16 @@
+version: 2
+models:
+- name: customers
+  columns:
+  - name: email_address
+    meta:
+      masking_policy: mask_email
+      justification: Contains customer email address which is direct PII.
+  - name: phone_number
+    meta:
+      masking_policy: mask_phone
+      justification: Contains customer phone number which is direct PII.
+  - name: ssn
+    meta:
+      masking_policy: mask_ssn
+      justification: Contains social security number which is highly sensitive direct PII.
