@@ -1,0 +1,9 @@
+version: 2
+models:
+- name: orders
+  columns:
+  - name: shipping_address
+    meta:
+      masking_policy: mask_address
+      justification: Contains full physical address information which is considered
+        Personally Identifiable Information (PII).
