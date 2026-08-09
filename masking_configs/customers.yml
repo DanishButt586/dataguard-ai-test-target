@@ -1,0 +1,20 @@
+version: 2
+models:
+- name: customers
+  columns:
+  - name: email_address
+    meta:
+      masking_policy: mask_email
+      justification: Contains personal email address.
+  - name: full_name
+    meta:
+      masking_policy: redact
+      justification: Contains full name of the customer.
+  - name: phone_number
+    meta:
+      masking_policy: mask_phone
+      justification: Contains personal phone number.
+  - name: ssn
+    meta:
+      masking_policy: mask_ssn
+      justification: Contains sensitive Social Security Number.
