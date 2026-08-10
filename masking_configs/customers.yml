@@ -5,17 +5,16 @@ models:
   - name: email_address
     meta:
       masking_policy: mask_email
-      justification: Contains personal email addresses which are direct PII.
+      justification: Contains individual email addresses which are direct PII.
   - name: full_name
     meta:
       masking_policy: redact
-      justification: Contains customer full names which are direct PII.
+      justification: Contains full names of individuals which are direct PII.
   - name: phone_number
     meta:
       masking_policy: mask_phone
-      justification: Contains personal telephone numbers.
+      justification: Contains telephone numbers which are direct PII.
   - name: ssn
     meta:
       masking_policy: mask_ssn
-      justification: Contains Social Security Numbers which are highly sensitive national
-        identifiers.
+      justification: Contains Social Security Numbers which are highly sensitive PII.
