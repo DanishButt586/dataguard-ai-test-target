@@ -1,0 +1,9 @@
+version: 2
+models:
+- name: customer_email_campaigns
+  columns:
+  - name: customer_email
+    meta:
+      masking_policy: mask_email
+      justification: Contains customer email addresses which are Personally Identifiable
+        Information (PII).
