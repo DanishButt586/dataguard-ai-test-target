@@ -5,5 +5,5 @@ models:
   - name: customer_email
     meta:
       masking_policy: mask_email
-      justification: Contains customer email addresses which are Personally Identifiable
-        Information (PII).
+      justification: Contains customer email addresses which are direct personal identifiers
+        (PII).
